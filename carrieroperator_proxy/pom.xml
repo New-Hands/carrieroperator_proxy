@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>carrieroperator_proxy</name>
+	<name>carrieroperatorproxy</name>
 	<description>运营商接口模拟</description>
 
 	<parent>
@@ -27,6 +27,10 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
@@ -38,6 +42,12 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.9</version>
+		</dependency>
+
+		<!--使用quartz模拟用户流量使用记录-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-quartz</artifactId>
 		</dependency>
 
 		<!--依赖的作用域 runtime-->

@@ -5,17 +5,19 @@ import lombok.*;
 import java.sql.Timestamp;
 
 /**
+ * <P>流量使用记录实体模型</P>
  * @author lst
  */
-@Getter
-@Setter
-@AllArgsConstructor
+
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 @NoArgsConstructor
 @ToString
 public class UseRecord {
-    private int id;
-    private int cardId;
-    private Timestamp usedTime;
-    private double usedAmount;
-    private int status;
+    @Getter @Setter private int id;
+    @Getter @Setter private int cardId;
+    @Getter @Setter private String usedWay;
+    @Getter @Setter private Timestamp usedTime;
+    @Getter @Setter private double usedAmount;
+    @Getter @Setter private int status;
+
 }

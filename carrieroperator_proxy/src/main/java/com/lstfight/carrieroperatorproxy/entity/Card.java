@@ -3,11 +3,11 @@ package com.lstfight.carrieroperatorproxy.entity;
 import lombok.*;
 
 /**
+ * 流量卡实体模型
  * @author lst
  *
  */
-@Getter
-@Setter
+
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
