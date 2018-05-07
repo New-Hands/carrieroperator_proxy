@@ -2,8 +2,6 @@ package com.lstfight.carrieroperatorproxy.controller;
 
 import com.lstfight.carrieroperatorproxy.entity.UseRecord;
 import com.lstfight.carrieroperatorproxy.service.UseRecordService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +17,6 @@ import java.sql.Timestamp;
 @RequestMapping("/")
 public class UseRecordController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UseRecordController.class);
     private final UseRecordService useRecordService;
 
     @Autowired
@@ -30,7 +27,7 @@ public class UseRecordController {
     @RequestMapping("/record/{cardId}")
     public String addRecord(@PathVariable(value = "cardId") int cardId) {
         Timestamp time = new Timestamp(System.currentTimeMillis());
-        int res = useRecordService.recordAdd(new UseRecord(1, cardId, "watchflim", time, 1.55, 1));
+        int res = useRecordService.recordAdd(new UseRecord(1, cardId, "watchVideo", time, 1.55, 1));
         return ""+res;
     }
 

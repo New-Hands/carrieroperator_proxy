@@ -26,7 +26,7 @@ public class TomcatConfig {
     public Connector httpConnector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
         connector.setScheme("http");
-        connector.setPort(8080);
+        connector.setPort(8088);
         connector.setSecure(false);
         AbstractProtocol protocol = (AbstractProtocol) connector.getProtocolHandler();
         protocol.setKeepAliveTimeout(6000);
